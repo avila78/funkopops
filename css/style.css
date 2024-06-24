@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+}
+
+footer {
+  background: rgb(77, 77, 77);
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  margin: 50px;
+}
+
+.row {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.col {
+  /* border: 1px solid blue; */
+  width: 23%;
+  margin-bottom: 10px;
+}
+
+.col img {
+  width: 100%;
+  filter: grayscale(70%);
+}
+
+.col img:hover {
+  filter: grayscale(0%);
+  transition: 500ms;
+}
+
+/* media queries - van al final */
+/* tipo de medio: pueden ser screen (pantallas, son las mas comunes) o print (pantallas de impresion) o speech, y all (para todos los anteriores)*/
+/* arrancamos con dispositivos small (celulares) */
+@media all and (max-width: 767px) {
+  main {
+    margin: 20px;
+  }
+
+  .col {
+    width: 100%;
+  }
+}
+
+/* dispositivos medianos (tablets) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  main {
+    margin: 30px;
+  }
+
+  .col {
+    width: 47%;
+  }
+}
+
+/* dispositivos grandes (notebooks y monitores de PC) */
+/* @media all and (min-width: 992px) { */
+/* } */
